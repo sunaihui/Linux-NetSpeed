@@ -10,7 +10,7 @@ export PATH
 #	Blog: https://www.94ish.me/
 #=================================================
 
-sh_ver="1.3.1"
+sh_ver="1.3.2"
 github="raw.githubusercontent.com/cx9208/Linux-NetSpeed/master"
 
 Green_font_prefix="\033[32m" && Red_font_prefix="\033[31m" && Green_background_prefix="\033[42;37m" && Red_background_prefix="\033[41;37m" && Font_color_suffix="\033[0m"
@@ -53,7 +53,7 @@ installbbr(){
 
 #安装BBRplus内核
 installbbrplus(){
-	kernel_version="4.14.129-bbrplus"
+	kernel_version="4.14.166-bbrplus"
 	if [[ "${release}" == "centos" ]]; then
 		wget -N --no-check-certificate https://github.com/sunaihui/Linux-NetSpeed/releases/download/4.14.166/kernel-4.14.166_bbrplus.rpm
 		wget -N --no-check-certificate https://github.com/sunaihui/Linux-NetSpeed/releases/download/4.14.166/kernel-devel-4.14.166_bbrplus.rpm
@@ -608,7 +608,7 @@ check_sys_Lotsever(){
 check_status(){
 	kernel_version=`uname -r | awk -F "-" '{print $1}'`
 	kernel_version_full=`uname -r`
-	if [[ ${kernel_version_full} = "4.14.129-bbrplus" ]]; then
+	if [[ ${kernel_version_full} = "4.14.166-bbrplus" ]]; then
 		kernel_status="BBRplus"
 	elif [[ ${kernel_version} = "3.10.0" || ${kernel_version} = "3.16.0" || ${kernel_version} = "3.2.0" || ${kernel_version} = "4.4.0" || ${kernel_version} = "3.13.0"  || ${kernel_version} = "2.6.32" || ${kernel_version} = "4.9.0" ]]; then
 		kernel_status="Lotserver"
