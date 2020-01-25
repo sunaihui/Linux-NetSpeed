@@ -58,9 +58,7 @@ installbbrplus(){
 		wget -N --no-check-certificate https://github.com/sunaihui/Linux-NetSpeed/releases/download/4.14.166/kernel-4.14.166_bbrplus.rpm
 		wget -N --no-check-certificate https://github.com/sunaihui/Linux-NetSpeed/releases/download/4.14.166/kernel-devel-4.14.166_bbrplus.rpm
 		wget -N --no-check-certificate https://github.com/sunaihui/Linux-NetSpeed/releases/download/4.14.166/kernel-headers-4.14.166_bbrplus.rpm
-		yum install -y kernel-4.14.166_bbrplus.rpm
-		yum install -y kernel-devel-4.14.166_bbrplus.rpm
-		yum install -y kernel-headers-4.14.166_bbrplus.rpm
+		yum install -y kernel-4.14.166_bbrplus.rpm kernel-devel-4.14.166_bbrplus.rpm kernel-headers-4.14.166_bbrplus.rpm
 		rm -f kernel-4.14.166_bbrplus.rpm
 		rm -f kernel-devel-4.14.166_bbrplus.rpm
 		rm -f kernel-headers-4.14.166_bbrplus.rpm
