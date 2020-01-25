@@ -64,7 +64,7 @@ installbbrplus(){
 		rm -f kernel-4.14.166_bbrplus.rpm
 		rm -f kernel-devel-4.14.166_bbrplus.rpm
 		rm -f kernel-headers-4.14.166_bbrplus.rpm
-		kernel_version="4.14.129_bbrplus" #fix a bug
+		kernel_version="4.14.166_bbrplus" #Update
 	elif [[ "${release}" == "debian" || "${release}" == "ubuntu" ]]; then
 		mkdir bbrplus && cd bbrplus
 		wget -N --no-check-certificate http://${github}/bbrplus/debian-ubuntu/${bit}/linux-headers-${kernel_version}.deb
