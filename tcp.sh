@@ -53,16 +53,16 @@ installbbr(){
 
 #安装BBRplus内核
 installbbrplus(){
-	kernel_version="4.14.166-bbrplus"
+	kernel_version="4.14.168-bbrplus"
 	if [[ "${release}" == "centos" ]]; then
-		wget -N --no-check-certificate https://github.com/sunaihui/Linux-NetSpeed/releases/download/4.14.166/kernel-4.14.166_bbrplus.rpm
-		wget -N --no-check-certificate https://github.com/sunaihui/Linux-NetSpeed/releases/download/4.14.166/kernel-devel-4.14.166_bbrplus.rpm
-		wget -N --no-check-certificate https://github.com/sunaihui/Linux-NetSpeed/releases/download/4.14.166/kernel-headers-4.14.166_bbrplus.rpm
-		yum install -y kernel-4.14.166_bbrplus.rpm kernel-devel-4.14.166_bbrplus.rpm kernel-headers-4.14.166_bbrplus.rpm
-		rm -f kernel-4.14.166_bbrplus.rpm
-		rm -f kernel-devel-4.14.166_bbrplus.rpm
-		rm -f kernel-headers-4.14.166_bbrplus.rpm
-		kernel_version="4.14.166_bbrplus" #Update
+		wget -N --no-check-certificate https://github.com/sunaihui/Linux-NetSpeed/releases/download/4.14.168/kernel-4.14.166_bbrplus.rpm
+		wget -N --no-check-certificate https://github.com/sunaihui/Linux-NetSpeed/releases/download/4.14.168/kernel-devel-4.14.166_bbrplus.rpm
+		wget -N --no-check-certificate https://github.com/sunaihui/Linux-NetSpeed/releases/download/4.14.168/kernel-headers-4.14.166_bbrplus.rpm
+		yum install -y kernel-4.14.168_bbrplus.rpm kernel-devel-4.14.168_bbrplus.rpm kernel-headers-4.14.168_bbrplus.rpm
+		rm -f kernel-4.14.168_bbrplus.rpm
+		rm -f kernel-devel-4.14.168_bbrplus.rpm
+		rm -f kernel-headers-4.14.168_bbrplus.rpm
+		kernel_version="4.14.168_bbrplus" #Update
 	elif [[ "${release}" == "debian" || "${release}" == "ubuntu" ]]; then
 		mkdir bbrplus && cd bbrplus
 		wget -N --no-check-certificate http://${github}/bbrplus/debian-ubuntu/${bit}/linux-headers-${kernel_version}.deb
