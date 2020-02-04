@@ -55,9 +55,9 @@ installbbr(){
 installbbrplus(){
 	kernel_version="4.14.168-bbrplus"
 	if [[ "${release}" == "centos" ]]; then
-		wget -N --no-check-certificate https://github.com/sunaihui/Linux-NetSpeed/releases/download/4.14.168/kernel-4.14.166_bbrplus.rpm
-		wget -N --no-check-certificate https://github.com/sunaihui/Linux-NetSpeed/releases/download/4.14.168/kernel-devel-4.14.166_bbrplus.rpm
-		wget -N --no-check-certificate https://github.com/sunaihui/Linux-NetSpeed/releases/download/4.14.168/kernel-headers-4.14.166_bbrplus.rpm
+		wget -N --no-check-certificate https://github.com/sunaihui/Linux-NetSpeed/releases/download/4.14.168/kernel-4.14.168_bbrplus.rpm
+		wget -N --no-check-certificate https://github.com/sunaihui/Linux-NetSpeed/releases/download/4.14.168/kernel-devel-4.14.168_bbrplus.rpm
+		wget -N --no-check-certificate https://github.com/sunaihui/Linux-NetSpeed/releases/download/4.14.168/kernel-headers-4.14.168_bbrplus.rpm
 		yum install -y kernel-4.14.168_bbrplus.rpm kernel-devel-4.14.168_bbrplus.rpm kernel-headers-4.14.168_bbrplus.rpm
 		rm -f kernel-4.14.168_bbrplus.rpm
 		rm -f kernel-devel-4.14.168_bbrplus.rpm
