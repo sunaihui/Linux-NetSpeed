@@ -61,7 +61,8 @@ installbbrplus(){
 		yum install -y kernel-${kernel_version}.rpm kernel-devel-4.14.129_bbrplus.rpm kernel-headers-4.14.129-bbrplus.rpm
 		rm -f kernel-${kernel_version}.rpm
 		rm -f kernel-devel-4.14.129_bbrplus.rpm
-		rm -f kernel_version="4.14.129_bbrplus" #fix a bug
+		rm -f kernel_version="4.14.129_bbrplus"
+		kernel_version="4.14.129_bbrplus"#fix a bug
 	elif [[ "${release}" == "debian" || "${release}" == "ubuntu" ]]; then
 		mkdir bbrplus && cd bbrplus
 		wget -N --no-check-certificate http://${github}/bbrplus/debian-ubuntu/${bit}/linux-headers-${kernel_version}.deb
