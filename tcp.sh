@@ -441,7 +441,7 @@ case "$num" in
 	;;
 	*)
 	clear
-	echo -e "${Error}:请输入正确数字 [0-11]"
+	echo -e "${Error}:请输入正确数字 [0-12]"
 	sleep 5s
 	start_menu
 	;;
@@ -671,9 +671,9 @@ check_sys_Lotsever(){
 check_status(){
 	kernel_version=`uname -r | awk -F "-" '{print $1}'`
 	kernel_version_full=`uname -r`
-	if [[ ${kernel_version_full} = "4.14.129_bbrplus" ]]; then
+	if [[ ${kernel_version_full} = "4.14.129-bbrplus" ]]; then
 		kernel_status="BBRplus"
-	elif [[ ${kernel_version_full} = "4.14.168_bbrplus" ]]; then
+	elif [[ ${kernel_version_full} = "4.14.168-bbrplus" ]]; then
 		kernel_status="BBRplus"
 	elif [[ ${kernel_version} = "3.10.0" || ${kernel_version} = "3.16.0" || ${kernel_version} = "3.2.0" || ${kernel_version} = "4.4.0" || ${kernel_version} = "3.13.0"  || ${kernel_version} = "2.6.32" || ${kernel_version} = "4.9.0" ]]; then
 		kernel_status="Lotserver"
@@ -740,4 +740,3 @@ check_sys
 check_version
 [[ ${release} != "debian" ]] && [[ ${release} != "ubuntu" ]] && [[ ${release} != "centos" ]] && echo -e "${Error} 本脚本不支持当前系统 ${release} !" && exit 1
 start_menu
-
