@@ -55,13 +55,13 @@ installbbr(){
 installbbrplus(){
 	kernel_version="4.14.129-bbrplus"
 	if [[ "${release}" == "centos" ]]; then
-		wget -N --no-check-certificate https://github.com/sunaihui/Linux-NetSpeed/releases/download/4.14.129/kernel-4.14.129_bbrplus.rpm
-		wget -N --no-check-certificate https://github.com/sunaihui/Linux-NetSpeed/releases/download/4.14.129/kernel-devel-4.14.129_bbrplus.rpm
-		wget -N --no-check-certificate https://github.com/sunaihui/Linux-NetSpeed/releases/download/4.14.129/kernel-headers-4.14.129_bbrplus.rpm
-		yum install -y kernel-4.14.129_bbrplus.rpm kernel-devel-4.14.129_bbrplus.rpm kernel-headers-4.14.129_bbrplus.rpm
-		rm -f kernel-4.14.129_bbrplus.rpm
-		rm -f kernel-devel-4.14.129_bbrplus.rpm
-		rm -f kernel_version="4.14.129_bbrplus"
+		wget -N --no-check-certificate https://raw.githubusercontent.com/sunaihui/Linux-NetSpeed/master/bbrplus/centos/7/kernel-4.14.129-bbrplus.rpm
+		wget -N --no-check-certificate https://github.com/sunaihui/Linux-NetSpeed/releases/download/4.14.129/kernel-devel-4.14.129-bbrplus.rpm
+		wget -N --no-check-certificate https://github.com/sunaihui/Linux-NetSpeed/releases/download/4.14.129/kernel-headers-4.14.129-bbrplus.rpm
+		yum install -y kernel-4.14.129-bbrplus.rpm kernel-devel-4.14.129-bbrplus.rpm kernel-headers-4.14.129-bbrplus.rpm
+		rm -f kernel-4.14.129-bbrplus.rpm
+		rm -f kernel-devel-4.14.129-bbrplus.rpm
+		rm -f kernel-headers-4.14.129-bbrplus.rpm
 		kernel_version="4.14.129_bbrplus" #fix a bug
 	elif [[ "${release}" == "debian" || "${release}" == "ubuntu" ]]; then
 		mkdir bbrplus && cd bbrplus
